@@ -3,7 +3,6 @@ function gettime() {
     hours = date.getHours().toString().padStart(2, '0');
     minute = date.getMinutes().toString().padStart(2, '0');
     second = date.getSeconds().toString().padStart(2, '0');
-    //console.log(hours + ":" + minute + ":" + second);
 }
 
 const digital_watch = document.querySelector(".digital-watch");
@@ -16,10 +15,6 @@ function updateTime() {
 
 
 function timeLaps() {
-    // const h2 = document.createElement("h2");
-    // //let h2 = document.querySelector(".laps")
-    // h2.innerHTML = hours + ":" + minute + ":" + second;
-    // document.querySelector(".main").appendChild(h2);
 
     //storing in local storage
     if (localStorage.getItem("timeArray") == null) {
