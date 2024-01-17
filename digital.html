@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital-Watch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Lemon&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 410px;
+            height: 200px;
+            margin: 50px auto;
+            border: 2px solid black;
+            /* border-radius: 20px; */
+            background-color: rgb(174, 193, 231);
+        }
+
+        .digital-watch {
+            margin: 10px auto;
+        }
+
+        #btn {
+            float: inline-end;
+            display: block;
+            width: 100%;
+            padding: 28px 20px;
+            margin: 20px auto;
+            background-color: rgba(62, 112, 213, 0.3);
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            /* box-shadow: 5px 5px rgba(0, 0, 0, 0.396); */
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-family: 'Lemon', serif;
+            font-style: italic;
+            text-align: center;
+        }
+        h3{
+            font-size: 1.2rem;
+            font-family: 'Lemon', serif;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="digital-watch">
+
+        </div>
+        <button id="btn" onclick="timeLaps()">TimeLaps</button>
+    </div>
+
+    <script>
+
+
+        function gettime() {
+            const date = new Date();
+            hours = date.getHours();
+            minute = date.getMinutes();
+            second = date.getSeconds();
+            //console.log(hours + ":" + minute + ":" + second);
+        }
+        const main_div = document.querySelector(".main");
+        const digital_watch = document.querySelector(".digital-watch");
+        const h1 = document.createElement("h1");
+
+        function updateTime() {
+            h1.innerHTML = hours + ":" + minute + ":" + second;
+            digital_watch.appendChild(h1);
+        }
+        function timeLaps(){
+            const h3 = document.createElement("h3");
+            h3.innerHTML = hours + ":" + minute + ":" + second;
+            main_div.appendChild(h3);
+
+        }
+        setInterval(gettime, 1000);
+        setInterval(updateTime, 1000);
+
+
+
+        
+
+
+
+    </script>
+</body>
+
+</html>
