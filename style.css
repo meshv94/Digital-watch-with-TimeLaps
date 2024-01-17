@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 410px;
+    height: 200px;
+    margin: 50px auto;
+    border: 2px solid black;
+    /* border-radius: 20px; */
+    background-color: rgb(174, 193, 231);
+}
+
+.digital-watch {
+    margin: 10px auto;
+}
+
+#btn {
+    float: inline-end;
+    display: block;
+    width: 100%;
+    padding: 28px 20px;
+    margin: 20px auto;
+    background-color: rgba(62, 112, 213, 0.3);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    /* box-shadow: 5px 5px rgba(0, 0, 0, 0.396); */
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Lemon', serif;
+    font-style: italic;
+    text-align: center;
+}
+h2{
+    font-size: 3.2rem;
+    font-family: 'Lemon', serif;
+    font-style: italic;
+    text-align: center;
+    margin: 10px auto;
+}
