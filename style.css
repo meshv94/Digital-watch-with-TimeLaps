@@ -17,17 +17,17 @@
     margin: 10px auto;
 }
 
-#btn {
-    float: inline-end;
+.btn {
     display: block;
     width: 100%;
     padding: 28px 20px;
     margin: 20px auto;
-    background-color: rgba(62, 112, 213, 0.3);
+    /* background-color: rgba(62, 112, 213, 0.3); */
+    /* background: transparent; */
     border-bottom: none;
     border-left: none;
     border-right: none;
-    /* box-shadow: 5px 5px rgba(0, 0, 0, 0.396); */
+    box-shadow: 5px 5px 5px 5px  rgba(0, 0, 0, 0.396);
 }
 
 h1 {
@@ -42,4 +42,5 @@ h2{
     font-style: italic;
     text-align: center;
     margin: 10px auto;
+    background-color: beige;
 }
