@@ -1,8 +1,8 @@
 function gettime() {
     const date = new Date();
-    hours = date.getHours(00);
-    minute = date.getMinutes(00);
-    second = date.getSeconds(00);
+    hours = date.getHours().toString().padStart(2, '0');
+    minute = date.getMinutes().toString().padStart(2, '0');
+    second = date.getSeconds().toString().padStart(2, '0');
     //console.log(hours + ":" + minute + ":" + second);
 }
 
@@ -36,7 +36,7 @@ function timeLaps() {
 
 function showLaps() {
     document.querySelector(".show").innerHTML = "";
-    
+
     let LSArray = JSON.parse(localStorage.getItem("timeArray"));
     LSArray.map(element => {
         timeElement = `<h2 class="laps"> ${element} </h2>`
